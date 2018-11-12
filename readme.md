@@ -2,8 +2,9 @@
 
 A wrapper for [yaml-cpp](https://github.com/jbeder/yaml-cpp).
 
-Tested with [OpenFrameworks](http://openframeworks.cc) (0.9.8).
-Works with both macOS Sierra (Xcode 8.3) and Windows (VS 2015).
+Tested with [OpenFrameworks](http://openframeworks.cc) (0.10.0).
+Works with both macOS Sierra (Xcode 9.4) and Windows (VS 2017).
+On Linux make sure you install `yaml-cpp` according to your distribution's guidelines.
 
 <br />
 
