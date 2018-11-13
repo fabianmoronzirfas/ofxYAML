@@ -30,12 +30,20 @@ common:
 	# but if the addon or addon libraries need special search paths they can be
 	# specified here separated by spaces or one per line using +=
 	# ADDON_INCLUDES =
+osx:
+	ADDON_INCLUDES =
+	ADDON_INCLUDES += src/
+
 	ADDON_INCLUDES_EXCLUDE = libs
 	ADDON_INCLUDES_EXCLUDE += libs/yaml-cpp
 	ADDON_INCLUDES_EXCLUDE += libs/yaml-cpp/include/%
 	ADDON_INCLUDES_EXCLUDE += libs/yaml-cpp/lib
 	ADDON_INCLUDES_EXCLUDE += libs/yaml-cpp/lib/%
 	
+linux64:
+	ADDON_INCLUDES =
+	ADDON_INCLUDES += src/
+	ADDON_INCLUDES += /usr/local/include/yaml-cpp
 	# any special flag that should be passed to the compiler when using this
 	# addon
 	# ADDON_CFLAGS =
@@ -64,3 +72,8 @@ common:
 	# when parsing the file system looking for libraries exclude this for all or
 	# a specific platform
 	#ADDON_LIBS_EXCLUDE =
+
+	ADDON_LIBS  =
+	ADDON_LIBS  += /usr/local/lib/libyaml-cpp.so
+	ADDON_LIBS  += /usr/local/lib/libyaml-cpp.so.0.6
+	ADDON_LIBS  += /usr/local/lib/libyaml-cpp.so.0.6.2
